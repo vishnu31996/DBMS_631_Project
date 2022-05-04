@@ -104,7 +104,7 @@ public class UserDOA {
 		Connection con = null;
 		try {
 			createCon();
-			PreparedStatement st = con.prepareStatement("select * from atosdb2 where userid=? and security_answer=?");
+			PreparedStatement st = con.prepareStatement("");
 			st.setString(1, user.getUid());
 			st.setString(2, user.getUans());
 			ResultSet result = st.executeQuery();
